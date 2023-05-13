@@ -3,6 +3,7 @@ import { SmallPersonListItem } from "./people/smallPersonListItem";
 import { LargePersonListItem } from "./people/largePersonListItem";
 import { SmallProductListItem } from "./products/smallProductsListItem";
 import { LargeProductListItem } from "./products/largeProductsListItem";
+import { Modal } from "./Modal";
 
 const people = [{
 	name: 'John Doe',
@@ -61,6 +62,9 @@ function App() {
         resourceName="product"
         itemComponent={LargeProductListItem}
       />
+	  <Modal>
+		<LargeProductListItem product={products[1]} />
+	  </Modal>
     </>
 	);
 }
